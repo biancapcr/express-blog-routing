@@ -35,3 +35,4 @@ router.delete('/:id', (req, res) => {
     const id = req.params.id;
     res.send(`Cancellazione post con id ${req.params.id}`);
 });
+module.exports=router;

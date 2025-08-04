@@ -9,3 +9,7 @@ const port = 3000;
 app.get('/', (req, res) => {
   res.send('Benvenuto nel mio blog');
 });
+// avvio server
+app.listen(port, () => {
+  console.log(`Server in ascolto sulla porta ${port}`);
+});

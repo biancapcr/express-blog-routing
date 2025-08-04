@@ -4,7 +4,7 @@ const router = express.Router();
 
 // definisco rotta index
 router.get('/', (req, res) => {
-    res.send('Elenco post')
+    res.send('Elenco post');
 });
 
 // definisco rotta show
@@ -14,18 +14,24 @@ router.get('/:id', (req, res) => {
 });
 
 // definisco rotta store
-router.post('/', (req,res) => {
+router.post('/', (req, res) => {
   res.send(`Crea nuovo post`);
 });
 
 // definisco rotta modify
-router.patch('/:id',(req,res) => {
+router.patch('/:id',(req, res) => {
     const id = req.params.id;
-    res.send(`Modifica post ${req.params.id}`);
+    res.send(`Modifica post con id ${req.params.id}`);
 });
 
 // definisco rotta update 
-router.put('/:id',(req,res) => {
+router.put('/:id',(req, res) => {
     const id = req.params.id;
-    res.send(`Aggiorna post ${req.params.id}`);
+    res.send(`Aggiorna post con id ${req.params.id}`);
+});
+
+// definisco rotta destroy
+router.delete('/:id', (req, res) => {
+    const id = req.params.id;
+    res.send(`Cancellazione post con id ${req.params.id}`);
 });

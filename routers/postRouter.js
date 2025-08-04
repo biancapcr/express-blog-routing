@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
 
 // definisco rotta show
 router.get('/:id', (req, res) => {
+    const id = req.params.id;
     res.send(`Post con id ${id}`)
 });
 
@@ -19,5 +20,12 @@ router.post('/', (req,res) => {
 
 // definisco rotta modify
 router.patch('/:id',(req,res) => {
-  res.send(`Modifica post ${req.params.id}`);
+    const id = req.params.id;
+    res.send(`Modifica post ${req.params.id}`);
+});
+
+// definisco rotta update 
+router.put('/:id',(req,res) => {
+    const id = req.params.id;
+    res.send(`Aggiorna post ${req.params.id}`);
 });
